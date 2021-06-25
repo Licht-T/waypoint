@@ -36,4 +36,33 @@
 
   {{/each}}
 
+  {{#each 
+    (array
+      (hash state=0)
+      (hash state=1)
+      (hash state=2)
+      (hash
+        state=3
+        error=(hash
+          code=127
+          message="Example error message"
+          detailsList=(array "Example detail")
+        )
+      )
+    )
+    as |vars|
+  }}
+    <div style="display: flex">
+      <OperationStatusIndicator
+        @status={{hash
+          state=vars.state
+          details="Example details"
+          error=vars.error
+          startTime=(hash seconds=1609455600 nanos=0)
+          completeTime=(hash seconds=1609455660 nanos=0)
+        }}
+      />
+    </div>
+  {{/each}}
+
 </div>

@@ -1,0 +1,20 @@
+@use 'pds/tokens/color';
+@use 'pds/tokens/scale';
+@use 'pds/core/typography/config' as Typography;
+
+.operation-status-indicator {
+  @include Typography.Interface(S);
+  color: color.$ui-gray-500;
+
+  @media (prefers-color-scheme: dark) {
+    color: color.$ui-gray-200;
+  }
+
+  &--error {
+    color: color.$red-500;
+
+    @media (prefers-color-scheme: dark) {
+      color: color.$red-400;
+    }
+  }
+}
