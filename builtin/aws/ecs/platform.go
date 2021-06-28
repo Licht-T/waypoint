@@ -1666,7 +1666,7 @@ deploy {
 	doc.SetField(
 		"subnets",
 		"the VPC subnets to use for the application",
-		docs.Default("public subnets in the default VPC"),
+		docs.Default("default subnets in the default VPC"),
 	)
 
 	doc.SetField(

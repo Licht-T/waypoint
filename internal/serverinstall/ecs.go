@@ -66,7 +66,7 @@ type ecsConfig struct {
 	// with the ECS Service
 	ExecutionRoleName string `hcl:"execution_role_name,optional"`
 
-	// Subnets to place the service into. Defaults to the public Subnets in the
+	// Subnets to place the service into. Defaults to default Subnets in the
 	// default VPC.
 	Subnets []string `hcl:"subnets,optional"`
 

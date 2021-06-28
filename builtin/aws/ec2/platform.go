@@ -403,7 +403,7 @@ type PlatformConfig struct {
 	// Additional security groups to add to the EC2 instance.
 	SecurityGroups []string `hcl:"security_groups,optional"`
 
-	// Subnet to put the instance into. Defaults to a public subnet in the default VPC.
+	// Subnet to put the instance into. Defaults to default subnets in the default VPC.
 	Subnet string `hcl:"subnet,optional"`
 }
 
@@ -466,7 +466,7 @@ func (p *Platform) Documentation() (*docs.Documentation, error) {
 	doc.SetField(
 		"subnet",
 		"the subnet to place the instances into",
-		docs.Default("a public subnet in the dafault VPC"),
+		docs.Default("default subnets in the dafault VPC"),
 	)
 
 	return doc, nil

@@ -1022,7 +1022,7 @@ func (r *Releaser) Documentation() (*docs.Documentation, error) {
 	doc.SetField(
 		"subnets",
 		"the subnet ids to allow the ALB to run in",
-		docs.Default("public subnets in the account default VPC"),
+		docs.Default("default subnets in the account default VPC"),
 	)
 
 	doc.SetField(
